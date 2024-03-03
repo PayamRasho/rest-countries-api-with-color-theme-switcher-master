@@ -1,16 +1,132 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap");
 
-
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-body{
-  font-family: 'Nunito Sans', sans-serif ;
+body {
+  font-family: "Nunito Sans", sans-serif;
+  /* padding: 20px; */
+  background-color: #1f2c37;
+  color: white;
 }
 
-img{
+img {
   max-width: 100%;
+}
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b3743;
+  padding: 10px 20px;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.filter .form-control {
+  width: 100%;
+}
+.filter .form-control input {
+  background-color: #2b3743;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: inherit;
+  letter-spacing: 1px;
+  width: 100%;
+  margin: 0 0 30px;
+}
+.filter .form-control input::placeholder {
+  color: white;
+}
+
+.filter .region-filter .select {
+  background-color: #2b3743;
+  color: white;
+  font-family: inherit;
+  padding: 10px;
+
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+}
+
+.grid article {
+}
+
+.grid article img {
+  border-radius: 5px 5px 0 0;
+  /* height: 250px; */
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  padding: 20px;
+}
+.grid .details {
+  background-color: #2b3743;
+  padding: 40px 20px;
+  margin-top: -20px;
+  border-radius: 0 0 5px 5px;
+}
+.grid .details h3 {
+  padding-bottom: 10px;
+}
+.grid .details h4 {
+  padding-bottom: 5px;
+}
+.grid .details h4 span {
+  font-weight: 300;
+}
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .filter {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .filter .form-control {
+    width: auto;
+  }
+  .filter .region-filter {
+    width: auto;
+  }
+  .filter .form-control input {
+    width: auto;
+    margin: 0;
+  }
+  .filter .region-filter {
+    width: auto;
+  }
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  body {
+    /* padding: 50px 100px; */
+  }
+  .header,
+  .filter,
+  .grid {
+    padding: 20px 100px;
+  }
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
