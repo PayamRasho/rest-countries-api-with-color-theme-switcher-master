@@ -1,12 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap");
 
+
+:root {
+  --dark-bg-color: hsl(207, 26%, 17%);
+  --article-color: hsl(209, 23%, 22%);
+  --text-color: hsl(0, 0%, 100%);
+  --light-mode-text: hsl(200, 15%, 8%);
+  --light-mode-input: hsl(0, 0%, 52%);
+  --light-mode-background: hsl(0, 0%, 98%);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif !important;
   /* padding: 20px; */
   background-color: #1f2c37;
   color: white;
@@ -22,6 +32,36 @@ img {
   align-items: center;
   background-color: #2b3743;
   padding: 10px 20px;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn{
+  background-color: var(--dark-bg-color);
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  border: 2px solid var(--dark-bg-color);
+  border-radius: 5px;
+  transition: background-color 0.5s;
+  font-family: "Nunito Sans", sans-serif;
+
+
+}
+
+.btn:hover{
+  background-color: white;
+  color: var(--dark-bg-color);
+}
+
+.btn-light{
+  background-color: var(--article-color);
+  border: 2px solid var(--article-color);
+
 }
 
 .filter {
